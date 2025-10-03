@@ -37,7 +37,7 @@ export default function FinalCTA() {
 
           {/* Waitlist Form */}
           <div className="mb-8">
-            <WaitlistForm source="final_cta" size="xl" />
+            <WaitlistForm source="final_cta" size="lg" />
           </div>
 
           {/* Trust indicators */}

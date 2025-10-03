@@ -4,9 +4,7 @@ const nextConfig = {
       domains: [],
       formats: ['image/avif', 'image/webp'],
     },
-    experimental: {
-      optimizeCss: true,
-    },
+    // Removed experimental.optimizeCss - it was causing the critters error
   }
   
   module.exports = nextConfig
