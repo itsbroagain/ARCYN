@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { MessageSquare, Sparkles, Rocket } from 'lucide-react';
+import { Terminal, Code2, Server } from 'lucide-react';
 import Container from '@/components/layout/Container';
 import GradientText from '@/components/ui/GradientText';
 import FadeIn from '@/components/animations/FadeIn';
@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     number: '01',
-    icon: MessageSquare,
+    icon: Terminal,
     title: 'Describe Your App',
     description: 'Tell Arcyn what you want to build in plain English. No technical jargon needed.',
     gradient: 'from-primary-500 to-purple-500',
@@ -18,7 +18,7 @@ const steps = [
   },
   {
     number: '02',
-    icon: Sparkles,
+    icon: Code2,
     title: 'Review & Refine',
     description: 'AI generates a complete project spec. Review features, data models, and tech stack before proceeding.',
     gradient: 'from-purple-500 to-pink-500',
@@ -26,7 +26,7 @@ const steps = [
   },
   {
     number: '03',
-    icon: Rocket,
+    icon: Server,
     title: 'Deploy & Ship',
     description: 'Get a production-ready app deployed to Vercel with GitHub repo, database, and payments configured.',
     gradient: 'from-pink-500 to-cyan-500',
@@ -43,11 +43,11 @@ export default function HowItWorks() {
       <Container className="relative z-10">
         {/* Section Header */}
         <FadeIn className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono mb-6">
             From Idea to <GradientText>Production</GradientText>
             <br />in 3 Simple Steps
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto font-mono">
             No coding required. Just describe what you want, and Arcyn handles the rest.
           </p>
         </FadeIn>
@@ -69,7 +69,7 @@ export default function HowItWorks() {
                 <div className="relative bg-dark-100 rounded-2xl p-8 border border-dark-50 card-lift glow-hover h-full">
                   {/* Step Number */}
                   <div className="absolute -top-4 -left-4 w-12 h-12 rounded-xl bg-gradient-to-br from-dark-200 to-dark-100 border border-dark-50 flex items-center justify-center">
-                    <span className="text-2xl font-bold gradient-text">{step.number}</span>
+                    <span className="text-2xl font-bold font-mono gradient-text">{step.number}</span>
                   </div>
 
                   {/* Icon */}
@@ -80,12 +80,12 @@ export default function HowItWorks() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                  <p className="text-gray-400 mb-6">{step.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4 font-mono">{step.title}</h3>
+                  <p className="text-gray-400 mb-6 font-mono">{step.description}</p>
 
                   {/* Example Box */}
                   <div className="bg-dark-200 rounded-lg p-4 border border-dark-50">
-                    <div className="text-xs text-gray-500 mb-2">Example:</div>
+                    <div className="text-xs text-gray-500 mb-2 font-mono">Example:</div>
                     <pre className="text-sm text-gray-300 whitespace-pre-wrap font-mono">
                       {step.example}
                     </pre>
@@ -98,15 +98,15 @@ export default function HowItWorks() {
 
         {/* Bottom CTA */}
         <FadeIn delay={0.8} className="text-center mt-16">
-          <p className="text-gray-400 mb-6">Ready to see it in action?</p>
+          <p className="text-gray-400 mb-6 font-mono">Ready to see it in action?</p>
           <motion.button
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 via-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 via-purple-600 to-cyan-600 text-white font-semibold font-mono rounded-lg hover:shadow-lg hover:shadow-primary-500/50 transition-all"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.querySelector('#waitlist')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <span>Join the Waitlist</span>
-            <Rocket className="w-5 h-5" />
+            <Server className="w-5 h-5" />
           </motion.button>
         </FadeIn>
       </Container>
