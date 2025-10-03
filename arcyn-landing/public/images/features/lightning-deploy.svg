@@ -1,0 +1,52 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lightning-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="50%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+    
+    <filter id="lightning-glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Circular background -->
+  <circle cx="60" cy="60" r="45" fill="url(#lightning-gradient)" opacity="0.1"/>
+  
+  <!-- Lightning bolt -->
+  <g filter="url(#lightning-glow)">
+    <path d="M 65 25 L 45 55 L 55 55 L 50 85 L 75 50 L 65 50 Z" 
+          fill="url(#lightning-gradient)" stroke="url(#lightning-gradient)" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Speed lines -->
+  <g opacity="0.4">
+    <line x1="35" y1="35" x2="25" y2="25" stroke="url(#lightning-gradient)" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="85" y1="35" x2="95" y2="25" stroke="url(#lightning-gradient)" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="35" y1="85" x2="25" y2="95" stroke="url(#lightning-gradient)" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+    </line>
+    <line x1="85" y1="85" x2="95" y2="95" stroke="url(#lightning-gradient)" stroke-width="2" stroke-linecap="round">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.5s" begin="0.9s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Rotating circles -->
+  <g opacity="0.2">
+    <circle cx="60" cy="60" r="50" stroke="url(#lightning-gradient)" stroke-width="1" fill="none" stroke-dasharray="10 5">
+      <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="60" r="55" stroke="url(#lightning-gradient)" stroke-width="1" fill="none" stroke-dasharray="5 10">
+      <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="10s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

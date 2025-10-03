@@ -1,0 +1,46 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base grid -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(99, 102, 241, 0.05)" stroke-width="1"/>
+    </pattern>
+    
+    <pattern id="grid-accent" width="180" height="180" patternUnits="userSpaceOnUse">
+      <path d="M 180 0 L 0 0 0 180" fill="none" stroke="rgba(99, 102, 241, 0.1)" stroke-width="1.5"/>
+    </pattern>
+    
+    <!-- Gradient overlay -->
+    <linearGradient id="grid-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#0a0a0a;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="grid-spotlight" cx="50%" cy="30%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.1" />
+      <stop offset="70%" style="stop-color:#6366f1;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Apply patterns -->
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <rect width="1920" height="1080" fill="url(#grid-accent)"/>
+  
+  <!-- Spotlight effect -->
+  <rect width="1920" height="1080" fill="url(#grid-spotlight)"/>
+  
+  <!-- Fade to black at bottom -->
+  <rect width="1920" height="1080" fill="url(#grid-fade)"/>
+  
+  <!-- Accent dots at intersections -->
+  <g opacity="0.3">
+    <circle cx="360" cy="240" r="2" fill="#6366f1"/>
+    <circle cx="720" cy="360" r="2" fill="#8b5cf6"/>
+    <circle cx="1080" cy="480" r="2" fill="#06b6d4"/>
+    <circle cx="1440" cy="600" r="2" fill="#6366f1"/>
+    <circle cx="540" cy="180" r="2" fill="#8b5cf6"/>
+    <circle cx="900" cy="300" r="2" fill="#06b6d4"/>
+    <circle cx="1260" cy="420" r="2" fill="#6366f1"/>
+    <circle cx="1620" cy="540" r="2" fill="#8b5cf6"/>
+  </g>
+</svg>

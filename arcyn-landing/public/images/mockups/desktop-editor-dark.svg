@@ -1,0 +1,208 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="editor-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.05"/>
+    </linearGradient>
+    
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="15"/>
+      <feOffset dx="0" dy="10" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Desktop window shadow -->
+  <rect x="50" y="50" width="1100" height="650" rx="12" fill="#000000" opacity="0.3" filter="url(#shadow)"/>
+  
+  <!-- Desktop window -->
+  <rect x="50" y="40" width="1100" height="650" rx="12" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="1"/>
+  
+  <!-- Title bar -->
+  <rect x="50" y="40" width="1100" height="40" rx="12" fill="#252526"/>
+  <rect x="50" y="68" width="1100" height="1" fill="#2d2d2d"/>
+  
+  <!-- Window controls -->
+  <circle cx="75" cy="60" r="6" fill="#ff5f56"/>
+  <circle cx="95" cy="60" r="6" fill="#ffbd2e"/>
+  <circle cx="115" cy="60" r="6" fill="#27c93f"/>
+  
+  <!-- Window title -->
+  <text x="600" y="65" font-family="Inter, sans-serif" font-size="13" fill="#cccccc" text-anchor="middle" font-weight="500">
+    TaskFlow Pro - src/app/api/projects/route.ts
+  </text>
+  
+  <!-- Sidebar -->
+  <rect x="50" y="80" width="250" height="610" fill="#1e1e1e"/>
+  <rect x="299" y="80" width="1" height="610" fill="#2d2d2d"/>
+  
+  <!-- Sidebar header -->
+  <text x="70" y="110" font-family="Inter, sans-serif" font-size="11" fill="#858585" font-weight="600">EXPLORER</text>
+  
+  <!-- File tree -->
+  <g font-family="Inter, sans-serif" font-size="12" fill="#cccccc">
+    <!-- Folders -->
+    <g opacity="0.9">
+      <text x="70" y="140">📁 src</text>
+      <text x="90" y="165">📁 app</text>
+      <text x="110" y="190">📁 api</text>
+      <text x="130" y="215" fill="#569cd6">📁 projects</text>
+      <text x="110" y="240">📁 components</text>
+      <text x="110" y="265">📁 lib</text>
+      <text x="90" y="290">📁 public</text>
+    </g>
+    
+    <!-- Files under projects folder -->
+    <g opacity="0.8">
+      <rect x="145" y="205" width="140" height="20" fill="#37373d" rx="2"/>
+      <text x="150" y="220" fill="#9cdcfe">📄 route.ts</text>
+      <text x="150" y="245" fill="#808080">📄 [id]</text>
+    </g>
+  </g>
+  
+  <!-- Code editor area -->
+  <rect x="300" y="80" width="850" height="610" fill="#1e1e1e"/>
+  
+  <!-- Tab bar -->
+  <rect x="300" y="80" width="850" height="35" fill="#2d2d2d"/>
+  
+  <!-- Active tab -->
+  <rect x="300" y="80" width="200" height="35" fill="#1e1e1e"/>
+  <text x="320" y="102" font-family="Inter, sans-serif" font-size="12" fill="#ffffff">route.ts</text>
+  <circle cx="485" cy="97" r="3" fill="#666666"/>
+  
+  <!-- Code content with syntax highlighting -->
+  <g font-family="JetBrains Mono, monospace" font-size="13">
+    <!-- Line numbers -->
+    <g fill="#858585" text-anchor="end">
+      <text x="335" y="145">1</text>
+      <text x="335" y="165">2</text>
+      <text x="335" y="185">3</text>
+      <text x="335" y="205">4</text>
+      <text x="335" y="225">5</text>
+      <text x="335" y="245">6</text>
+      <text x="335" y="265">7</text>
+      <text x="335" y="285">8</text>
+      <text x="335" y="305">9</text>
+      <text x="335" y="325">10</text>
+      <text x="335" y="345">11</text>
+      <text x="335" y="365">12</text>
+      <text x="335" y="385">13</text>
+      <text x="335" y="405">14</text>
+      <text x="335" y="425">15</text>
+      <text x="335" y="445">16</text>
+      <text x="335" y="465">17</text>
+      <text x="335" y="485">18</text>
+    </g>
+    
+    <!-- Code lines with syntax highlighting -->
+    <text x="355" y="145" fill="#569cd6">import</text>
+    <text x="405" y="145" fill="#cccccc"> { </text>
+    <text x="425" y="145" fill="#dcdcaa">NextResponse</text>
+    <text x="530" y="145" fill="#cccccc"> } </text>
+    <text x="550" y="145" fill="#569cd6">from</text>
+    <text x="590" y="145" fill="#ce9178"> 'next/server';</text>
+    
+    <text x="355" y="165" fill="#569cd6">import</text>
+    <text x="405" y="165" fill="#cccccc"> { </text>
+    <text x="425" y="165" fill="#dcdcaa">supabase</text>
+    <text x="510" y="165" fill="#cccccc"> } </text>
+    <text x="530" y="165" fill="#569cd6">from</text>
+    <text x="570" y="165" fill="#ce9178"> '@/lib/supabase';</text>
+    
+    <text x="355" y="205" fill="#6a9955" font-style="italic">// Get all projects</text>
+    
+    <text x="355" y="225" fill="#569cd6">export</text>
+    <text x="405" y="225" fill="#569cd6"> async</text>
+    <text x="465" y="225" fill="#569cd6"> function</text>
+    <text x="535" y="225" fill="#dcdcaa"> GET</text>
+    <text x="565" y="225" fill="#cccccc">() {</text>
+    
+    <text x="375" y="245" fill="#569cd6">  const</text>
+    <text x="435" y="245" fill="#cccccc"> { </text>
+    <text x="455" y="245" fill="#9cdcfe">data</text>
+    <text x="495" y="245" fill="#cccccc">, </text>
+    <text x="515" y="245" fill="#9cdcfe">error</text>
+    <text x="565" y="245" fill="#cccccc"> } = </text>
+    <text x="605" y="245" fill="#569cd6">await</text>
+    <text x="655" y="245" fill="#9cdcfe"> supabase</text>
+    
+    <text x="375" y="265" fill="#cccccc">    .</text>
+    <text x="395" y="265" fill="#dcdcaa">from</text>
+    <text x="435" y="265" fill="#cccccc">(</text>
+    <text x="445" y="265" fill="#ce9178">'projects'</text>
+    <text x="535" y="265" fill="#cccccc">)</text>
+    
+    <text x="375" y="285" fill="#cccccc">    .</text>
+    <text x="395" y="285" fill="#dcdcaa">select</text>
+    <text x="455" y="285" fill="#cccccc">(</text>
+    <text x="465" y="285" fill="#ce9178">'*'</text>
+    <text x="485" y="285" fill="#cccccc">);</text>
+    
+    <text x="375" y="325" fill="#569cd6">  if</text>
+    <text x="405" y="325" fill="#cccccc"> (</text>
+    <text x="415" y="325" fill="#9cdcfe">error</text>
+    <text x="465" y="325" fill="#cccccc">) {</text>
+    
+    <text x="395" y="345" fill="#569cd6">    return</text>
+    <text x="455" y="345" fill="#dcdcaa"> NextResponse</text>
+    <text x="565" y="345" fill="#cccccc">.</text>
+    <text x="575" y="345" fill="#dcdcaa">json</text>
+    <text x="615" y="345" fill="#cccccc">(</text>
+    
+    <text x="415" y="365" fill="#cccccc">      { </text>
+    <text x="435" y="365" fill="#9cdcfe">error</text>
+    <text x="485" y="365" fill="#cccccc">: </text>
+    <text x="505" y="365" fill="#9cdcfe">error</text>
+    <text x="555" y="365" fill="#cccccc">.</text>
+    <text x="565" y="365" fill="#9cdcfe">message</text>
+    <text x="635" y="365" fill="#cccccc"> },</text>
+    
+    <text x="415" y="385" fill="#cccccc">      { </text>
+    <text x="435" y="385" fill="#9cdcfe">status</text>
+    <text x="495" y="385" fill="#cccccc">: </text>
+    <text x="515" y="385" fill="#b5cea8">500</text>
+    <text x="545" y="385" fill="#cccccc"> }</text>
+    
+    <text x="395" y="405" fill="#cccccc">    );</text>
+    
+    <text x="375" y="425" fill="#cccccc">  }</text>
+    
+    <text x="375" y="465" fill="#569cd6">  return</text>
+    <text x="435" y="465" fill="#dcdcaa"> NextResponse</text>
+    <text x="545" y="465" fill="#cccccc">.</text>
+    <text x="555" y="465" fill="#dcdcaa">json</text>
+    <text x="595" y="465" fill="#cccccc">(</text>
+    <text x="605" y="465" fill="#9cdcfe">data</text>
+    <text x="645" y="465" fill="#cccccc">);</text>
+    
+    <text x="355" y="485" fill="#cccccc">}</text>
+  </g>
+  
+  <!-- Cursor blinking -->
+  <rect x="665" y="453" width="2" height="18" fill="#ffffff">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Status bar -->
+  <rect x="50" y="690" width="1100" height="0" fill="#007acc"/>
+  <rect x="50" y="690" width="1100" height="25" fill="#007acc" opacity="0.1"/>
+  <rect x="50" y="690" width="1100" height="1" fill="#007acc"/>
+  
+  <g font-family="Inter, sans-serif" font-size="11" fill="#cccccc">
+    <text x="320" y="707">TypeScript React</text>
+    <text x="500" y="707">UTF-8</text>
+    <text x="650" y="707">LF</text>
+    <text x="800" y="707">Ln 16, Col 47</text>
+    <text x="1050" y="707">⚡ Arcyn</text>
+  </g>
+  
+  <!-- Glow effect overlay -->
+  <rect x="300" y="80" width="850" height="610" fill="url(#editor-gradient)" opacity="0.3"/>
+</svg>

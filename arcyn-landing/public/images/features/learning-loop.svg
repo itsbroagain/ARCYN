@@ -1,0 +1,85 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="loop-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="50%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+    
+    <filter id="loop-glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Circular arrows forming loop -->
+  <g filter="url(#loop-glow)">
+    <!-- Top arc -->
+    <path d="M 40 45 A 20 20 0 0 1 80 45" 
+          stroke="url(#loop-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Arrow head top -->
+    <path d="M 80 45 L 75 40 M 80 45 L 75 50" 
+          stroke="url(#loop-gradient)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Right arc -->
+    <path d="M 80 45 A 20 20 0 0 1 80 75" 
+          stroke="url(#loop-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Arrow head right -->
+    <path d="M 80 75 L 75 70 M 80 75 L 85 70" 
+          stroke="url(#loop-gradient)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Bottom arc -->
+    <path d="M 80 75 A 20 20 0 0 1 40 75" 
+          stroke="url(#loop-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Arrow head bottom -->
+    <path d="M 40 75 L 45 80 M 40 75 L 45 70" 
+          stroke="url(#loop-gradient)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Left arc -->
+    <path d="M 40 75 A 20 20 0 0 1 40 45" 
+          stroke="url(#loop-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Arrow head left -->
+    <path d="M 40 45 L 45 50 M 40 45 L 35 50" 
+          stroke="url(#loop-gradient)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Center nodes representing data flow -->
+  <g>
+    <circle cx="60" cy="35" r="4" fill="url(#loop-gradient)">
+      <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="60" r="4" fill="url(#loop-gradient)">
+      <animate attributeName="r" values="4;6;4" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="85" r="4" fill="url(#loop-gradient)">
+      <animate attributeName="r" values="4;6;4" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="60" r="4" fill="url(#loop-gradient)">
+      <animate attributeName="r" values="4;6;4" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Moving particle along path -->
+  <circle r="3" fill="#ffffff">
+    <animateMotion dur="4s" repeatCount="indefinite">
+      <mpath href="#loop-path"/>
+    </animateMotion>
+  </circle>
+  
+  <!-- Hidden path for particle animation -->
+  <path id="loop-path" d="M 40 45 A 20 20 0 0 1 80 45 A 20 20 0 0 1 80 75 A 20 20 0 0 1 40 75 A 20 20 0 0 1 40 45 Z" 
+        fill="none" stroke="none"/>
+  
+  <!-- Outer pulse ring -->
+  <circle cx="60" cy="60" r="30" stroke="url(#loop-gradient)" stroke-width="1" fill="none" opacity="0.3">
+    <animate attributeName="r" values="30;45;30" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>

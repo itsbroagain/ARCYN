@@ -1,0 +1,50 @@
+<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Icon Part -->
+  <g>
+    <!-- Outer ring with gradient -->
+    <circle cx="24" cy="24" r="20" stroke="url(#logo-gradient)" stroke-width="2" fill="none" opacity="0.3"/>
+    
+    <!-- Inner geometric pattern -->
+    <path d="M24 8 L36 18 L36 30 L24 40 L12 30 L12 18 Z" fill="url(#logo-gradient)" opacity="0.2"/>
+    <path d="M24 8 L36 18 L36 30 L24 40 L12 30 L12 18 Z" stroke="url(#logo-gradient)" stroke-width="2" fill="none"/>
+    
+    <!-- Center accent -->
+    <circle cx="24" cy="24" r="4" fill="url(#logo-gradient)">
+      <animate attributeName="r" values="4;5;4" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Connecting lines -->
+    <line x1="24" y1="12" x2="24" y2="20" stroke="url(#logo-gradient)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="24" y1="28" x2="24" y2="36" stroke="url(#logo-gradient)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="16" y1="24" x2="20" y2="24" stroke="url(#logo-gradient)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="28" y1="24" x2="32" y2="24" stroke="url(#logo-gradient)" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  
+  <!-- Text Part -->
+  <g transform="translate(54, 0)">
+    <!-- A -->
+    <path d="M8 38 L14 14 L20 38 M10 30 L18 30" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- R -->
+    <path d="M26 38 L26 14 L34 14 C37 14 39 16 39 19 C39 22 37 24 34 24 L26 24 M32 24 L39 38" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- C -->
+    <path d="M58 18 C54 14 48 14 44 18 C40 22 40 30 44 34 C48 38 54 38 58 34" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- Y -->
+    <path d="M64 14 L70 26 M76 14 L70 26 L70 38" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    
+    <!-- N -->
+    <path d="M82 38 L82 14 L94 38 L94 14" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

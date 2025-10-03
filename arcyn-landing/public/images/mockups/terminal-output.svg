@@ -1,0 +1,104 @@
+<svg width="1000" height="600" viewBox="0 0 1000 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="terminal-shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
+      <feOffset dx="0" dy="8" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Terminal window shadow -->
+  <rect x="30" y="30" width="940" height="540" rx="10" fill="#000000" opacity="0.3" filter="url(#terminal-shadow)"/>
+  
+  <!-- Terminal window -->
+  <rect x="30" y="20" width="940" height="540" rx="10" fill="#1e1e1e" stroke="#323233" stroke-width="1"/>
+  
+  <!-- Terminal header -->
+  <rect x="30" y="20" width="940" height="35" rx="10" fill="#323233"/>
+  <rect x="30" y="45" width="940" height="1" fill="#1e1e1e"/>
+  
+  <!-- Window controls -->
+  <circle cx="55" cy="37" r="5" fill="#ff5f56"/>
+  <circle cx="75" cy="37" r="5" fill="#ffbd2e"/>
+  <circle cx="95" cy="37" r="5" fill="#27c93f"/>
+  
+  <!-- Terminal title -->
+  <text x="500" y="42" font-family="Inter, sans-serif" font-size="12" fill="#cccccc" text-anchor="middle" font-weight="500">
+    bash - arcyn generate
+  </text>
+  
+  <!-- Terminal content -->
+  <g font-family="JetBrains Mono, monospace" font-size="13">
+    <!-- Command prompt -->
+    <text x="60" y="85" fill="#27c93f">➜</text>
+    <text x="80" y="85" fill="#569cd6"> ~/projects</text>
+    <text x="200" y="85" fill="#cccccc"> arcyn generate</text>
+    
+    <!-- Output lines -->
+    <text x="60" y="120" fill="#cccccc">🚀 Initializing Arcyn AI IDE...</text>
+    
+    <text x="60" y="155" fill="#06b6d4">⚡ Phase 1: Analyzing Requirements</text>
+    <rect x="60" y="165" width="800" height="8" rx="4" fill="#2d2d2d"/>
+    <rect x="60" y="165" width="800" height="8" rx="4" fill="url(#progress-1)">
+      <animate attributeName="width" from="0" to="800" dur="2s" fill="freeze"/>
+    </rect>
+    <text x="870" y="172" fill="#10b981" font-size="11">✓ Complete</text>
+    
+    <text x="60" y="200" fill="#cccccc">  ✓ Parsed natural language input</text>
+    <text x="60" y="220" fill="#cccccc">  ✓ Identified 8 core features</text>
+    <text x="60" y="240" fill="#cccccc">  ✓ Mapped data relationships</text>
+    
+    <text x="60" y="275" fill="#06b6d4">⚡ Phase 2: Generating Project Specification</text>
+    <rect x="60" y="285" width="800" height="8" rx="4" fill="#2d2d2d"/>
+    <rect x="60" y="285" width="800" height="8" rx="4" fill="url(#progress-2)">
+      <animate attributeName="width" from="0" to="800" dur="2s" begin="2s" fill="freeze"/>
+    </rect>
+    <text x="870" y="292" fill="#10b981" font-size="11">✓ Complete</text>
+    
+    <text x="60" y="320" fill="#cccccc">  ✓ Selected optimal tech stack</text>
+    <text x="60" y="340" fill="#cccccc">  ✓ Resolved template dependencies</text>
+    <text x="60" y="360" fill="#cccccc">  ✓ Validated architecture</text>
+    
+    <text x="60" y="395" fill="#06b6d4">⚡ Phase 3: Assembling Codebase</text>
+    <rect x="60" y="405" width="800" height="8" rx="4" fill="#2d2d2d"/>
+    <rect x="60" y="405" width="640" height="8" rx="4" fill="url(#progress-3)">
+      <animate attributeName="width" from="0" to="640" dur="2s" begin="4s" fill="freeze"/>
+    </rect>
+    <text x="870" y="412" fill="#fbbf24" font-size="11">80% (In Progress)</text>
+    
+    <text x="60" y="440" fill="#cccccc">  ✓ Generated 847 lines of code</text>
+    <text x="60" y="460" fill="#cccccc">  ✓ Created 43 files across 12 directories</text>
+    <text x="60" y="480" fill="#cccccc">  ⏳ Wiring modules together...</text>
+    
+    <text x="60" y="515" fill="#858585" font-size="11">Estimated completion: 45 seconds</text>
+    
+    <!-- Blinking cursor -->
+    <rect x="60" y="530" width="10" height="15" fill="#ffffff">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Progress bar gradients -->
+  <defs>
+    <linearGradient id="progress-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+    
+    <linearGradient id="progress-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    
+    <linearGradient id="progress-3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+  </defs>
+</svg>

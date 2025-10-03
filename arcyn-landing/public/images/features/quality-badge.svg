@@ -1,0 +1,60 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badge-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="50%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+    
+    <filter id="badge-glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Badge shape (shield) -->
+  <g filter="url(#badge-glow)">
+    <path d="M 60 20 L 85 30 L 85 60 Q 85 80 60 95 Q 35 80 35 60 L 35 30 Z" 
+          fill="url(#badge-gradient)" opacity="0.2" stroke="url(#badge-gradient)" stroke-width="2"/>
+  </g>
+  
+  <!-- Inner shield -->
+  <path d="M 60 28 L 78 35 L 78 58 Q 78 73 60 85 Q 42 73 42 58 L 42 35 Z" 
+        fill="none" stroke="url(#badge-gradient)" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Checkmark -->
+  <g filter="url(#badge-glow)">
+    <path d="M 48 57 L 56 67 L 72 47" 
+          stroke="url(#badge-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  
+  <!-- 95% text -->
+  <text x="60" y="58" font-family="Inter, sans-serif" font-size="16" font-weight="bold" 
+        fill="url(#badge-gradient)" text-anchor="middle" opacity="0.8">95%</text>
+  
+  <!-- Sparkles around badge -->
+  <g opacity="0.6">
+    <circle cx="30" cy="40" r="2" fill="url(#badge-gradient)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="40" r="2" fill="url(#badge-gradient)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="75" r="2" fill="url(#badge-gradient)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="90" cy="75" r="2" fill="url(#badge-gradient)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Rotating ring -->
+  <circle cx="60" cy="57" r="35" stroke="url(#badge-gradient)" stroke-width="1" fill="none" 
+          opacity="0.2" stroke-dasharray="5 15">
+    <animateTransform attributeName="transform" type="rotate" from="0 60 57" to="360 60 57" 
+                      dur="10s" repeatCount="indefinite"/>
+  </circle>
+</svg>

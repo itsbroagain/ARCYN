@@ -1,0 +1,97 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brain-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="50%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Brain outline -->
+  <g filter="url(#glow)">
+    <!-- Left hemisphere -->
+    <path d="M 40 30 Q 25 35 25 50 Q 25 70 35 80 Q 40 85 45 85 Q 50 85 52 80" 
+          stroke="url(#brain-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Right hemisphere -->
+    <path d="M 80 30 Q 95 35 95 50 Q 95 70 85 80 Q 80 85 75 85 Q 70 85 68 80" 
+          stroke="url(#brain-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Top connection -->
+    <path d="M 40 30 Q 60 20 80 30" 
+          stroke="url(#brain-gradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Brain folds (left) -->
+    <path d="M 32 45 Q 38 47 42 45" 
+          stroke="url(#brain-gradient)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 30 55 Q 36 57 40 55" 
+          stroke="url(#brain-gradient)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 35 65 Q 41 67 45 65" 
+          stroke="url(#brain-gradient)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    
+    <!-- Brain folds (right) -->
+    <path d="M 78 45 Q 82 47 88 45" 
+          stroke="url(#brain-gradient)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 80 55 Q 84 57 90 55" 
+          stroke="url(#brain-gradient)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 75 65 Q 79 67 85 65" 
+          stroke="url(#brain-gradient)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- Neural network connections -->
+  <g opacity="0.6">
+    <!-- Nodes -->
+    <circle cx="35" cy="50" r="3" fill="url(#brain-gradient)">
+      <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="45" r="3" fill="url(#brain-gradient)">
+      <animate attributeName="r" values="3;4;3" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="70" cy="45" r="3" fill="url(#brain-gradient)">
+      <animate attributeName="r" values="3;4;3" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="85" cy="50" r="3" fill="url(#brain-gradient)">
+      <animate attributeName="r" values="3;4;3" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="42" cy="65" r="3" fill="url(#brain-gradient)">
+      <animate attributeName="r" values="3;4;3" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="60" r="3" fill="url(#brain-gradient)">
+      <animate attributeName="r" values="3;4;3" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="78" cy="65" r="3" fill="url(#brain-gradient)">
+      <animate attributeName="r" values="3;4;3" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Connections -->
+    <line x1="35" y1="50" x2="50" y2="45" stroke="url(#brain-gradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="50" y1="45" x2="70" y2="45" stroke="url(#brain-gradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="70" y1="45" x2="85" y2="50" stroke="url(#brain-gradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="35" y1="50" x2="42" y2="65" stroke="url(#brain-gradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="50" y1="45" x2="60" y2="60" stroke="url(#brain-gradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="70" y1="45" x2="60" y2="60" stroke="url(#brain-gradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="85" y1="50" x2="78" y2="65" stroke="url(#brain-gradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="42" y1="65" x2="60" y2="60" stroke="url(#brain-gradient)" stroke-width="1" opacity="0.3"/>
+    <line x1="60" y1="60" x2="78" y2="65" stroke="url(#brain-gradient)" stroke-width="1" opacity="0.3"/>
+  </g>
+  
+  <!-- Pulse waves emanating from center -->
+  <g opacity="0.3">
+    <circle cx="60" cy="55" r="20" stroke="url(#brain-gradient)" stroke-width="1.5" fill="none">
+      <animate attributeName="r" values="20;40;60" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.2;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="60" cy="55" r="20" stroke="url(#brain-gradient)" stroke-width="1.5" fill="none">
+      <animate attributeName="r" values="20;40;60" dur="3s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.2;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
