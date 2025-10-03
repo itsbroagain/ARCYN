@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Mail } from 'lucide-react';
+import { Mail, CheckCircle2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import { addToWaitlist } from '@/lib/supabase';
@@ -51,12 +51,25 @@ export default function WaitlistForm({ source = 'hero', onSuccess, size = 'lg' }
 
   if (isSuccess) {
     return (
-      <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-6 text-center">
-        <div className="text-4xl mb-3">🎉</div>
-        <h3 className="text-xl font-bold text-green-400 mb-2">You're on the list!</h3>
-        <p className="text-gray-300">
-          We'll notify you when Arcyn launches. Check your email for updates.
-        </p>
+      <div className="relative overflow-hidden bg-primary-600/10 border border-primary-500/30 rounded-lg p-6">
+        {/* Animated scan line effect */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary-500/5 to-transparent animate-pulse" />
+        
+        <div className="relative flex items-center justify-center gap-3">
+          <CheckCircle2 className="w-6 h-6 text-primary-400 animate-scale-in" />
+          <div className="text-left">
+            <h3 className="text-lg font-bold font-mono text-primary-300 tracking-wider">
+              ACCESS_GRANTED
+            </h3>
+            <p className="text-sm text-gray-400 font-mono mt-1">
+              {'>'} Waitlist entry confirmed. Launch notification queued.
+            </p>
+          </div>
+        </div>
+        
+        {/* Corner accents */}
+        <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary-500/50" />
+        <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-primary-500/50" />
       </div>
     );
   }
