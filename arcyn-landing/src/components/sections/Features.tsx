@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Brain, Zap, Shield, RefreshCw, Code2, Database } from 'lucide-react';
+import { Cpu, Zap, CheckCircle, GitBranch, Code2, Database } from 'lucide-react';
 import Container from '@/components/layout/Container';
 import GradientText from '@/components/ui/GradientText';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card';
@@ -9,7 +9,7 @@ import FadeIn from '@/components/animations/FadeIn';
 
 const features = [
   {
-    icon: Brain,
+    icon: Cpu,
     title: 'AI-Powered Generation',
     description: 'Claude Sonnet 4.5 + GPT-4.5 orchestration for intelligent code generation. Not templates—real, context-aware architecture.',
     gradient: 'from-primary-500 to-purple-500',
@@ -23,14 +23,14 @@ const features = [
     highlights: ['Vercel deployment', 'Auto GitHub push', 'DNS configuration']
   },
   {
-    icon: Shield,
+    icon: CheckCircle,
     title: '95%+ Quality Score',
     description: 'Every generated app passes strict QA checks. TypeScript strict mode, security scanning, accessibility validation.',
     gradient: 'from-pink-500 to-red-500',
     highlights: ['Zero TypeScript errors', 'Security best practices', 'WCAG 2.1 AA compliant']
   },
   {
-    icon: RefreshCw,
+    icon: GitBranch,
     title: 'Continuous Learning',
     description: 'Arcyn learns from every user edit. Templates auto-improve weekly based on real usage patterns from thousands of developers.',
     gradient: 'from-cyan-500 to-blue-500',
@@ -58,10 +58,10 @@ export default function Features() {
       <Container>
         {/* Section Header */}
         <FadeIn className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-mono mb-6">
             Why Developers <GradientText>Love Arcyn</GradientText>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto font-mono">
             Not another code generator. A complete AI-powered development environment.
           </p>
         </FadeIn>
@@ -79,14 +79,14 @@ export default function Features() {
                     </div>
                   </div>
                   
-                  <CardTitle>{feature.title}</CardTitle>
-                  <CardDescription>{feature.description}</CardDescription>
+                  <CardTitle className="font-mono">{feature.title}</CardTitle>
+                  <CardDescription className="font-mono">{feature.description}</CardDescription>
                 </CardHeader>
 
                 <CardContent>
                   <ul className="space-y-2">
                     {feature.highlights.map((highlight) => (
-                      <li key={highlight} className="flex items-center gap-2 text-sm text-gray-400">
+                      <li key={highlight} className="flex items-center gap-2 text-sm text-gray-400 font-mono">
                         <span className="text-green-400">✓</span>
                         <span>{highlight}</span>
                       </li>
