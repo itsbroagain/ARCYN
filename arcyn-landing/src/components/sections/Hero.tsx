@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Zap, Code2 } from 'lucide-react';
+import { Terminal, Zap, Code2 } from 'lucide-react';
 import Container from '@/components/layout/Container';
 import GradientText from '@/components/ui/GradientText';
 import Badge from '@/components/ui/Badge';
@@ -57,14 +57,14 @@ export default function Hero() {
               className="mb-6"
             >
               <Badge variant="info" className="inline-flex items-center gap-2">
-                <Sparkles className="w-3 h-3" />
-                <span>21 beta testers in 24 hours</span>
+                <Terminal className="w-3 h-3" />
+                <span className="font-mono">21 beta testers in 24 hours</span>
               </Badge>
             </motion.div>
 
             {/* Main Headline */}
             <motion.h1
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold font-mono leading-tight mb-6 tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -76,7 +76,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <motion.p
-              className="text-xl text-gray-400 mb-8 max-w-xl"
+              className="text-xl text-gray-400 mb-8 max-w-xl font-mono"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -97,13 +97,13 @@ export default function Hero() {
                 <div className="w-8 h-8 rounded-lg bg-primary-500/10 flex items-center justify-center">
                   <Zap className="w-4 h-4 text-primary-400" />
                 </div>
-                <span className="text-gray-300">95%+ Production Ready</span>
+                <span className="text-gray-300 font-mono">95%+ Production Ready</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center">
                   <Code2 className="w-4 h-4 text-cyan-400" />
                 </div>
-                <span className="text-gray-300">Deploy in ~4 Minutes</span>
+                <span className="text-gray-300 font-mono">Deploy in ~4 Minutes</span>
               </div>
             </motion.div>
 
@@ -119,7 +119,7 @@ export default function Hero() {
 
             {/* Trust Indicators */}
             <motion.p
-              className="text-sm text-gray-500"
+              className="text-sm text-gray-500 font-mono"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
@@ -160,8 +160,8 @@ export default function Hero() {
                 <div className="flex items-center gap-3">
                   <img src="/images/features/quality-badge.svg" alt="Quality" className="w-12 h-12" />
                   <div>
-                    <div className="text-2xl font-bold text-white">96%</div>
-                    <div className="text-xs text-gray-400">Quality Score</div>
+                    <div className="text-2xl font-bold text-white font-mono">96%</div>
+                    <div className="text-xs text-gray-400 font-mono">Quality Score</div>
                   </div>
                 </div>
               </motion.div>
@@ -174,8 +174,8 @@ export default function Hero() {
                 transition={{ delay: 2 }}
               >
                 <img src="/images/features/lightning-deploy.svg" alt="Fast" className="w-8 h-8 mb-2" />
-                <div className="text-sm text-gray-400 mb-1">Generation Time</div>
-                <div className="text-2xl font-bold gradient-text">3m 47s</div>
+                <div className="text-sm text-gray-400 mb-1 font-mono">Generation Time</div>
+                <div className="text-2xl font-bold gradient-text font-mono">3m 47s</div>
               </motion.div>
             </div>
           </motion.div>
@@ -193,7 +193,7 @@ export default function Hero() {
             transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center gap-2 text-gray-500"
           >
-            <span className="text-xs uppercase tracking-wider">Scroll to explore</span>
+            <span className="text-xs uppercase tracking-wider font-mono">Scroll to explore</span>
             <svg
               className="w-6 h-6"
               fill="none"
